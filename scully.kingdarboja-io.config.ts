@@ -4,5 +4,12 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'kingdarboja-io',
   outDir: './dist/static',
-  routes: {},
+  routes: {
+    '/blog/:slug': {
+      type: 'contentFolder',
+      slug: {
+        folder: './blog'
+      }
+    },
+  },
 };
