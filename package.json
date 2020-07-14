@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
+    "scully:build": "ng build && scully",
     "scully:serve": "scully serve"
   },
   "private": true,
