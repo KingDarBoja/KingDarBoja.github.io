@@ -125,3 +125,16 @@ Using stored unhandled routes!.
         document.querySelector('scully-content')
         ----------------
         
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************
+        ----------------
+        Error, missing "[33m<scully-content>[39m" in route "[33m/blog/___UNPUBLISHED___kclfyilq_GlJpgq0xIY3EA1tpuG5dmK35D960BGWg[39m"
+        without <scully-content> we can not render this route.
+        Make sure it is in there, and not inside any conditionals (*ngIf)
+        You can check this by opening "[33mhttp://localhost:4200//blog/___UNPUBLISHED___kclfyilq_GlJpgq0xIY3EA1tpuG5dmK35D960BGWg[39m"
+        when you serve your app with [33mng serve[39m and then in the browsers console run:
+        [33mdocument.querySelector('scully-content')[39m
+        ----------------
+        
