@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kingdarboja-io';
+  menuShow = false;
+
+  toggleNavbar(): void {
+    this.menuShow = !this.menuShow;
+  }
 }

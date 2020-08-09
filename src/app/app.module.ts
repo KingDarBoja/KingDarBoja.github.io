@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { AboutmeComponent } from './aboutme/aboutme.component';
+import { AboutComponent } from './aboutme/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutmeComponent,
+    AboutComponent,
     ProjectsComponent
   ],
   imports: [

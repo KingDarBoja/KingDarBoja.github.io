@@ -1,16 +1,30 @@
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
-  <img class="w-full" src="https://tailwindcss.com//img/card-top.jpg" alt="Sunset in the mountains">
-  <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2 text-black">The Coldest Sunset</div>
-      <p class="text-gray-700 text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-              perferendis eaque, exercitationem praesentium nihil.
-      </p>
+<header class="lg:px-16 px-6 lg:py-0 py-3 bg-oxford-dark flex flex-wrap">
+  <div id="logo" class="flex-1 flex justify-between items-center text-orange">
+    <a href="#" class="font-bold text-xl">KingDarBoja</a>
+    <label for="menu-toggle" class="cursor-pointer lg:hidden block">
+      <svg class="h-8 w-8 text-platinum" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+      </svg>
+    </label>
+    <input id="menu-toggle" type="checkbox" class="hidden" (click)="toggleNavbar()"/>
   </div>
-  <div class="px-6 py-4">
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+  <div id="menu" [ngClass]="{'hidden': !menuShow, 'block': menuShow}" class="lg:flex lg:items-center lg:w-auto w-full">
+    <nav>
+      <ul class="lg:flex items-center justify-between text-base text-platinum">
+        <li>
+          <a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-orange" routerLink="about">About Me</a>
+        </li>
+        <li>
+          <a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-orange" routerLink="projects">Projects</a>
+        </li>
+        <li>
+          <a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:border-orange" routerLink="blog">Blog</a>
+        </li>
+      </ul>
+    </nav>
   </div>
+</header>
+
+<div class="text-platinum">
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
