@@ -12,4 +12,8 @@ export class AppComponent {
   toggleNavbar(): void {
     this.menuShow = !this.menuShow;
   }
+
+  activateRoute(routeEvent: any): void {
+    this.menuShow = false;
+  }
 }

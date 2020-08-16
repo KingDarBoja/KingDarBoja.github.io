@@ -25,6 +25,10 @@
   </div>
 </header>
 
-<div class="text-platinum lg:px-16 px-6 py-4">
-  <router-outlet></router-outlet>
+<div class="lg:px-16 px-6 py-6 flex-grow text-platinum">
+  <router-outlet (activate)="activateRoute($event)"></router-outlet>
 </div>
+
+<footer class="lg:px-16 px-6 py-2 flex bg-oxford-dark">
+  <div class="text-base justify-center text-platinum">Made with <a class="text-orange" href="https://angular.io/">Angular</a> + <a class="text-orange" href="https://scully.io/">Scully</a></div>
+</footer>
