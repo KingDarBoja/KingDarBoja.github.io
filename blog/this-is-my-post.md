@@ -1,9 +1,8 @@
 ---
 title: 'This is my post'
 description: 'blog description'
-published: false
-slugs:
-    - ___UNPUBLISHED___kclfyilq_GlJpgq0xIY3EA1tpuG5dmK35D960BGWg
-
+published: true
 ---
 # This is my post
+
+Some random post body to test out scully generation.

@@ -1,19 +1,27 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {ActivatedRoute, Router, ROUTES} from '@angular/router';
-
-declare var ng: any;
+import { Component, OnInit } from '@angular/core';
+import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
   preserveWhitespaces: true,
-  encapsulation: ViewEncapsulation.Emulated
 })
 export class BlogComponent implements OnInit {
+  links: Observable<ScullyRoute[]> = this.scully.available$;
 
-  ngOnInit(): void {}
+  constructor(private scully: ScullyRoutesService) {}
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  ngOnInit(): void {
+    this.links = this.scully.available$.pipe(
+      map((routes) =>
+        routes.filter(
+          (route) =>
+            route.route.startsWith('/blog/') && route.sourceFile.endsWith('.md')
+        )
+      )
+    );
   }
 }

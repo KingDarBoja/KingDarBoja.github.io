@@ -1,0 +1,8 @@
+<h1 class="text-orange text-lg" *ngIf="blogPostMetadata | async as blogPost">
+  {{ blogPost.title }}
+</h1>
+<hr>
+<!-- This is where Scully will inject the static HTML -->
+<scully-content></scully-content>
+<hr />
+<h2>End of content</h2>
