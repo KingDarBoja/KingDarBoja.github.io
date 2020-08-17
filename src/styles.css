@@ -16,12 +16,6 @@ h1 {
   margin: 0.67em 0;
 }
 
-hr {
-  box-sizing: content-box; 
-  height: 0; 
-  overflow: visible; 
-}
-
 a {
   background-color: transparent;
 }
@@ -97,7 +91,6 @@ input {
 h1,
 h2,
 h3,
-hr,
 p {
   margin: 0;
 }
@@ -120,10 +113,6 @@ html {
   border-width: 0; 
   border-style: solid; 
   border-color: currentColor; 
-}
-
-hr {
-  border-top-width: 1px;
 }
 
 img {
@@ -367,6 +356,10 @@ img {
   line-height: 1;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -415,10 +408,6 @@ img {
 
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.static {
-  position: static;
 }
 
 .text-oxford {

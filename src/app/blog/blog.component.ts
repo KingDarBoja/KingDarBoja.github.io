@@ -10,18 +10,18 @@ import { map } from 'rxjs/operators';
   preserveWhitespaces: true,
 })
 export class BlogComponent implements OnInit {
-  links: Observable<ScullyRoute[]> = this.scully.available$;
+  links: Observable<ScullyRoute[]>;
 
   constructor(private scully: ScullyRoutesService) {}
 
   ngOnInit(): void {
     this.links = this.scully.available$.pipe(
-      map((routes) =>
-        routes.filter(
+      map((routes: ScullyRoute[]) => {
+        return routes.filter(
           (route) =>
             route.route.startsWith('/blog/') && route.sourceFile.endsWith('.md')
-        )
-      )
+        );
+      })
     );
   }
 }

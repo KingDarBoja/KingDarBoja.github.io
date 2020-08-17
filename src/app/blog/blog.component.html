@@ -1,5 +1,5 @@
 <ul aria-label="Blog posts">
-  <li *ngFor="let blog of links | async">
-    <a [routerLink]="blog.route" class="text-orange font-semibold text-base">{{ blog.title }}</a>
+  <li *ngFor="let blog of links | async" class="list-disc font-semibold">
+    <a [routerLink]="blog.route" class="text-orange text-base">{{ blog.title }}</a>
   </li>
 </ul>
