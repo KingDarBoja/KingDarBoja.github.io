@@ -1,5 +1,45 @@
 @tailwind base;
 @tailwind components;
+
+.card-wrapper {
+  @apply mx-auto;
+  @apply max-w-sm;
+  @apply w-full;
+  @apply content-center;
+}
+.card-wrapper .card-side {
+  @apply bg-oxford-dark;
+  @apply h-48;
+  @apply flex-none;
+  @apply rounded-t-lg;
+  @apply overflow-hidden;
+}
+.card-wrapper .card-body {
+  @apply bg-platinum;
+  @apply border-r;
+  @apply border-b;
+  @apply border-l;
+  @apply border-oxford-dark;
+  @apply rounded-b-lg;
+  @apply p-4;
+  @apply flex;
+  @apply flex-col;
+  @apply justify-between;
+  @apply leading-normal;
+}
+
+@screen md {
+  .card-wrapper {
+    @apply flex max-w-full;
+  }
+  .card-wrapper .card-side {
+    @apply h-auto w-48 rounded-t-none rounded-l-lg;
+  }
+  .card-wrapper .card-body {
+    @apply rounded-r-lg border-oxford-dark border-l-0 border-t;
+  }
+}
+
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
