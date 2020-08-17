@@ -607,6 +607,18 @@ video {
   }
 }
 
+.card-container {
+  max-width: 24rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    display: flex;
+    max-width: 100%;
+  }
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
