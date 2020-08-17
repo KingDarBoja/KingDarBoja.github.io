@@ -3,14 +3,22 @@
     With few years of experience, I have looked for the way to contribute to
     different projects in several programming languages, especially those of
     daily use. Most of them are developed in TypeScript and Python, although I
-    also have some contributions in Scala, Dart and pure JavaScript. My current
-    focus is on learning the programming language Nim to develop some web
-    development libraries and in the future to apply it to robotics.
+    also have some contributions in Scala, Dart and pure JavaScript.
+  </h2>
+  <h2 class="text-base font-normal">
+    I am also actively contributing to the Spanish translation of the <a
+    class="text-orange"
+    href="https://github.com/microsoft/TypeScript-Website">TypeScript
+    Website</a>. My current focus is learning the programming language Nim to
+    develop some web libraries and apply it to robotics &hearts; . Besides that
+    focus, I am willing to learn NestJS / MongoDB for backend development and
+    either Ionic or NativeScript for Mobile Dev if needed.
   </h2>
 </section>
 <section class="py-4">
+  <h3 class="text-orange text-lg font-semibold pb-4">Active Open Source Projects</h3>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <ng-container *ngFor="let project of projects">
+    <ng-container *ngFor="let project of activeProjects">
       <div class="card-wrapper">
         <div class="card-side">
           <div class="flex h-full justify-center items-center">
@@ -20,12 +28,45 @@
         <div class="card-body">
           <div class="mb-8">
             <a class="text-oxford-dark font-bold text-base mb-2" [href]="project.gh_url">{{ project.title }}</a>
-            <p class="text-oxford text-sm">{{ project.body }}</p>
+            <p class="text-oxford text-sm" [innerHTML]="project.body"></p>
           </div>
           <div class="flex items-center">
             <div class="text-xs">
               <a class="text-oxford-dark font-bold leading-none pb-1" [href]="project.lang_url">{{ project.extra_note }}</a>
-              <p class="text-oxford font-semibold">{{ project.active_date }}</p>
+              <p class="text-oxford font-semibold" [innerHTML]="project.active_date"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>
+<section class="pb-4">
+  <h2 class="text-base font-normal">
+    There are some projects I either maintain (but lack of time or motivation to
+    keep bringing features, improvements or even answering issues as tend to be
+    a bit repetitive) or contributed at some point to use for my own needs.
+  </h2>
+</section>
+<section class="pb-4">
+  <h3 class="text-orange text-lg font-semibold pb-4">Occasional Contributions</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <ng-container *ngFor="let project of occasionalProjects">
+      <div class="card-wrapper">
+        <div class="card-side">
+          <div class="flex h-full justify-center items-center">
+            <img [src]="project.lang_icon" [alt]="project.lang_label">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="mb-8">
+            <a class="text-oxford-dark font-bold text-base mb-2" [href]="project.gh_url">{{ project.title }}</a>
+            <p class="text-oxford text-sm" [innerHTML]="project.body"></p>
+          </div>
+          <div class="flex items-center">
+            <div class="text-xs">
+              <a class="text-oxford-dark font-bold leading-none pb-1" [href]="project.lang_url">{{ project.extra_note }}</a>
+              <p class="text-oxford font-semibold" [innerHTML]="project.active_date"></p>
             </div>
           </div>
         </div>
