@@ -6,6 +6,7 @@ import { pluck, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog-post',
+  styleUrls: ['./blog-post.component.scss'],
   templateUrl: 'blog-post.component.html'
 })
 
