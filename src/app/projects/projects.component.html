@@ -10,24 +10,26 @@
 </section>
 <section class="py-4">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div class="card-wrapper">
-      <div class="card-side">
-        <div class="flex h-full justify-center items-center">
-          <img src="../../assets/icons/file_type_typescript_official.svg" alt="TypeScript">
+    <ng-container *ngFor="let project of projects">
+      <div class="card-wrapper">
+        <div class="card-side">
+          <div class="flex h-full justify-center items-center">
+            <img [src]="project.lang_icon" [alt]="project.lang_label">
+          </div>
         </div>
-      </div>
-      <div class="card-body">
-        <div class="mb-8">
-          <a class="text-oxford-dark font-bold text-xl mb-2" href="">Some Long Project Title</a>
-          <p class="text-oxford text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
-        </div>
-        <div class="flex items-center">
-          <div class="text-sm">
-            <p class="text-oxford-dark font-bold leading-none pb-1" href="">Made with TypeScript</p>
-            <p class="text-oxford font-semibold">Aug 18</p>
+        <div class="card-body">
+          <div class="mb-8">
+            <a class="text-oxford-dark font-bold text-base mb-2" [href]="project.gh_url">{{ project.title }}</a>
+            <p class="text-oxford text-sm">{{ project.body }}</p>
+          </div>
+          <div class="flex items-center">
+            <div class="text-xs">
+              <a class="text-oxford-dark font-bold leading-none pb-1" [href]="project.lang_url">{{ project.extra_note }}</a>
+              <p class="text-oxford font-semibold">{{ project.active_date }}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
 </section>

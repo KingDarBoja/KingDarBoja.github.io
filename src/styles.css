@@ -620,8 +620,8 @@ video {
   background-color: rgba(0, 19, 45, var(--bg-opacity));
   height: 12rem;
   flex: none;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   overflow: hidden;
 }
 
@@ -635,8 +635,8 @@ video {
   --border-opacity: 1;
   border-color: #00132D;
   border-color: rgba(0, 19, 45, var(--border-opacity));
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -655,15 +655,15 @@ video {
     width: 12rem;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
   }
 
   .card-wrapper .card-body {
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
     --border-opacity: 1;
     border-color: #00132D;
     border-color: rgba(0, 19, 45, var(--border-opacity));

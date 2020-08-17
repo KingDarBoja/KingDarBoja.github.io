@@ -11,7 +11,7 @@
   @apply bg-oxford-dark;
   @apply h-48;
   @apply flex-none;
-  @apply rounded-t-lg;
+  @apply rounded-t;
   @apply overflow-hidden;
 }
 .card-wrapper .card-body {
@@ -20,7 +20,7 @@
   @apply border-b;
   @apply border-l;
   @apply border-oxford-dark;
-  @apply rounded-b-lg;
+  @apply rounded-b;
   @apply p-4;
   @apply flex;
   @apply flex-col;
@@ -33,10 +33,10 @@
     @apply flex max-w-full;
   }
   .card-wrapper .card-side {
-    @apply h-auto w-48 rounded-t-none rounded-l-lg;
+    @apply h-auto w-48 rounded-t-none rounded-l;
   }
   .card-wrapper .card-body {
-    @apply rounded-r-lg border-oxford-dark border-l-0 border-t;
+    @apply rounded-b-none rounded-r border-oxford-dark border-l-0 border-t;
   }
 }
 
