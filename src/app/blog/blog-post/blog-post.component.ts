@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 import { ScullyRoutesService, ScullyRoute } from '@scullyio/ng-lib';
 import { ActivatedRoute } from '@angular/router';
 import { combineLatest } from 'rxjs';
 import { pluck, map, tap } from 'rxjs/operators';
+
+import { HighlightService } from '../../services/highlight.service';
 
 @Component({
   selector: 'app-blog-post',
@@ -10,10 +12,11 @@ import { pluck, map, tap } from 'rxjs/operators';
   templateUrl: 'blog-post.component.html'
 })
 
-export class BlogPostComponent {
+export class BlogPostComponent implements AfterViewChecked {
   constructor(
     private activatedRoute: ActivatedRoute,
-    private scully: ScullyRoutesService
+    private scully: ScullyRoutesService,
+    private highlightService: HighlightService,
   ) {}
 
   blogPostMetadata = combineLatest([
@@ -25,4 +28,8 @@ export class BlogPostComponent {
       routes.find((route: ScullyRoute) => route.route === `/blog/${slug}`)
     )
   );
+
+  ngAfterViewChecked(): void {
+    this.highlightService.highlightAll();
+  }
 }

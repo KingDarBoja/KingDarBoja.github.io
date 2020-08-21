@@ -51,7 +51,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/themes/prism-atom-dark.css"
             ],
             "scripts": []
           },
@@ -116,7 +117,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/themes/prism-atom-dark.css"
             ],
             "scripts": []
           }
