@@ -36,7 +36,7 @@
     @apply h-auto w-48 rounded-t-none rounded-l;
   }
   .card-wrapper .card-body {
-    @apply rounded-b-none rounded-r border-oxford-dark border-l-0 border-t;
+    @apply rounded-b-none rounded-r border-oxford-dark border-l-0 border-t flex-1;
   }
 }
 
