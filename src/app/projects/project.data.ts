@@ -89,14 +89,4 @@ export const OCCASIONAL_PROJECTS: ProjectInfo[] = [
     extra_note: 'Made with TypeScript',
     active_date: 'Maintainer since Feb. 2020 <br/> Looking for some help.',
   },
-  {
-    title: 'ng-toolkit',
-    body: 'Angular toolbox to bring serverless, universal and PWA config to your project in one go.',
-    gh_url: 'https://github.com/maciejtreder/ng-toolkit',
-    lang_icon: '../../assets/icons/file_type_angular.svg',
-    lang_url: 'https://github.com/angular/angular',
-    lang_label: 'Angular',
-    extra_note: 'Made with TypeScript',
-    active_date: 'Maintainer since Oct. 2019 <br/> Got lazy here.'
-  }
 ];
