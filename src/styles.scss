@@ -1,4 +1,9 @@
-@import "~prismjs/plugins/toolbar/prism-toolbar.css";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './styles/card.scss';
+@import 'tailwindcss/utilities';
+
+/* You can add global styles to this file, and also import other style files */
 
 body {
   overflow-x: hidden;

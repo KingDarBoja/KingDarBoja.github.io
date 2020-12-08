@@ -1,0 +1,25 @@
+.card-wrapper {
+  @apply mx-auto max-w-sm w-full content-center;
+}
+
+.card-wrapper .card-side {
+  @apply bg-oxford-dark h-48 flex-none rounded-t overflow-hidden;
+}
+
+.card-wrapper .card-body {
+  @apply bg-platinum border-r border-b border-l border-oxford-dark rounded-b p-4 flex flex-col justify-between leading-normal;
+}
+
+@screen md {
+  .card-wrapper {
+    @apply flex max-w-full;
+  }
+
+  .card-wrapper .card-side {
+    @apply h-auto w-48 rounded-t-none rounded-l;
+  }
+
+  .card-wrapper .card-body {
+    @apply rounded-b-none rounded-r border-oxford-dark border-l-0 border-t flex-1;
+  }
+}
