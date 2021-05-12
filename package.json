@@ -48,7 +48,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
-    "postcss": "8.2.0",
+    "postcss": "8.2.10",
     "postcss-import": "13.0.0",
     "postcss-loader": "4.1.0",
     "postcss-scss": "3.0.4",
